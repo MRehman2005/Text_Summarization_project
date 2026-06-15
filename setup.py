@@ -28,12 +28,13 @@ def get_requirement()-> list[str]:
     return requirement_lst
  
 
+from setuptools import find_packages, setup
+
 setup(
-   name="Text Summarization",
-   version=1.0,
    author="Muhammad Rehman",
-   author_email="rehmanmuhammad909@gmail.com",
-   packages=find_packages(),
-   install_requires=get_requirement()
-)               
+    name="textSummarizer",
+    version="1.0",
+    packages=find_packages(where="src"),
+    package_dir={"": "src"},
+)         
 
